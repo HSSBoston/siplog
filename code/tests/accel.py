@@ -4,7 +4,7 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 mpu = mpu6886.MPU6886(i2c)
 
 # Take X, Y, and Z acceleration values in m/s^2
-# Return pitch angle bertween the ground surface and the positive (right) side of the X axis
+# Return pitch angle bertween the ground surface and the positive (right) side of the Y axis
 #
 def pitch(x, y, z):
     accelMagnitude = math.sqrt(x**2 + y**2 + z**2)
